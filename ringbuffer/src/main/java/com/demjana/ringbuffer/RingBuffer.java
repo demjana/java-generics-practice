@@ -117,7 +117,7 @@ public class RingBuffer<T> {
     return "CircularBuffer: " +
         "elements=" + Arrays.toString(elements) +
         ", limit=" + elements.length +
-        ", head=" + start +
-        ", tail=" + end;
+        ", start=" + start +
+        ", endgit =" + end;
   }
 }
