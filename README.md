@@ -1,4 +1,4 @@
-## Ring Buffer
+## Ring Buffer 💫
 
  In computer science, a circular buffer, circular queue, cyclic buffer or ring buffer is a data structure that uses a single, fixed-size buffer as if it were connected end-to-end. This structure lends itself easily to buffering data streams.
  
@@ -43,4 +43,6 @@ Put 4 to buffer: CircularBuffer: elements=[1, 2, 3, 4], limit=4, start=0, end=0
   }
 ```
 
-![image](https://user-images.githubusercontent.com/58112290/123967342-81ce7a80-d9b6-11eb-93ef-c5262c0915b1.png)
+![image](https://user-images.githubusercontent.com/58112290/124114480-e9df9800-da6c-11eb-883b-34dfde180056.png)
+
+Note: Head = Start and Tail = End index
