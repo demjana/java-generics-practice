@@ -4,7 +4,7 @@
  
  Detailed description: https://en.wikipedia.org/wiki/Circular_buffer
  
-- First of all you have to define the size of buffer  in the constructor.
+- First of all, you have to define the size of buffer  in the constructor.
 ```
   public RingBuffer(int limit, Class<T> componentType) {
     this.elements = (T[]) Array.newInstance(componentType, limit);
@@ -20,17 +20,17 @@ end == start && Arrays.stream(elements).allMatch(Objects::isNull);
 ```
 - If you want to put an element to the buffer, use the put() function after that the start index will be increased: <br />
 ```
-Put 1 to buffer: CircularBuffer: elements=[1, null, null, null], limit=4, head=1, tail=0
-Put 2 to buffer: CircularBuffer: elements=[1, 2, null, null], limit=4, head=2, tail=0
-Put 3 to buffer: CircularBuffer: elements=[1, 2, 3, null], limit=4, head=3, tail=0
-Put 4 to buffer: CircularBuffer: elements=[1, 2, 3, 4], limit=4, head=0, tail=0
+Put 1 to buffer: CircularBuffer: elements=[1, null, null, null], limit=4, start=1, end=0
+Put 2 to buffer: CircularBuffer: elements=[1, 2, null, null], limit=4, start=2, end=0
+Put 3 to buffer: CircularBuffer: elements=[1, 2, 3, null], limit=4, start=3, end=0
+Put 4 to buffer: CircularBuffer: elements=[1, 2, 3, 4], limit=4, start=0, end=0
 ```
 - You can remove an element with the get() function, in this case the end index will be increased:
 ```
-Get: 1 CircularBuffer: elements=[null, 2, 3, 4], limit=4, head=0, tail=1
-Get: 2 CircularBuffer: elements=[null, null, 3, 4], limit=4, head=0, tail=2
-Get: 3 CircularBuffer: elements=[null, null, null, 4], limit=4, head=0, tail=3
-Get: 4 CircularBuffer: elements=[null, null, null, null], limit=4, head=0, tail=0
+1. Get: CircularBuffer: elements=[null, 2, 3, 4], limit=4, start=0, end=1
+2. Get: CircularBuffer: elements=[null, null, 3, 4], limit=4, start=0, end=2
+3. Get: CircularBuffer: elements=[null, null, null, 4], limit=4, start=0, end=3
+4. Get: CircularBuffer: elements=[null, null, null, null], limit=4, start=0, end=0
 ```
 - Furthermore it contains several custom implementation e.g. toArray-, asList-, addAll-, or sort method.
 ```
