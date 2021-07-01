@@ -118,6 +118,6 @@ public class RingBuffer<T> {
         "elements=" + Arrays.toString(elements) +
         ", limit=" + elements.length +
         ", start=" + start +
-        ", endgit =" + end;
+        ", end=" + end;
   }
 }
